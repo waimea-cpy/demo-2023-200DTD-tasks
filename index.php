@@ -2,6 +2,15 @@
     require_once 'common-functions.php';
     require_once 'common-top.php';
 
+?>
+
+
+<nav id="add-button">
+    <a href="form-new-project.php">+</a>
+</nav>
+
+
+<?php
 
     $sql = 'SELECT id, name, description, due
             FROM projects
