@@ -1,0 +1,215 @@
+/* GOOGLE FONTS
+**************************************/
+@import url('https://fonts.googleapis.com/css2?family=Antonio&family=Roboto&display=swap');
+
+
+/* GENERAL LAYOUT AND COLOUR
+**************************************/
+/* :root {
+    --page-back:         #bbdefb;
+    --page-text:         #000;
+    --page-text-low:     #666;
+
+    --header-back:       #0d47a1;
+    --header-text:       #fff;
+
+    --heading-text:      #0d47a1;
+
+    --link-text:         #0d47a1;
+    --link-hover-text:   #ff8f00;
+
+    --button-back:       #0d47a1;
+    --button-text:       #fff;
+    --button-hover-back: #ff8f00;
+    --button-hover-text: #000;
+
+    --panel-back:        #fff;
+    --border-color:      #999;
+    --highlight-back:    #ffd54f;
+
+    --done-text:         #e0e0e0;
+    --done-back:         #999;
+
+    --late-text:         #F44336;
+} */
+
+
+:root {
+    --page-back:         #263238;
+    --page-text:         #fff;
+    --page-text-low:     #546E7A;
+
+    --header-back:       #33691E;
+    --header-text:       #fff;
+
+    --heading-text:      #8BC34A;
+
+    --link-text:         #AED581;
+    --link-hover-text:   #8BC34A;
+
+    --button-back:       #607D8B;
+    --button-text:       #fff;
+    --button-hover-back: #8BC34A;
+    --button-hover-text: #000;
+
+    --panel-back:        #37474F;
+    --border-color:      #546E7A;
+    --highlight-back:    #455A64;
+
+    --done-text:         #546E7A;
+    --done-back:         #263238;
+
+    --late-text:         #EF5350;
+}
+
+
+
+/* GENERAL LAYOUT AND COLOUR
+**************************************/
+
+body {
+    background-color: var(--page-back);
+    color: var(--page-text);
+}
+
+main {
+    padding: 1rem;
+}
+
+
+/* GENERAL TEXT
+**************************************/
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+h1 {
+    font-family: 'Antonio', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: var(--heading-text);
+}
+
+h2, h3, h4, p {
+    margin-bottom: 0.75em;
+}
+
+a {
+    color: var(--link-text);
+}
+
+a:hover {
+    color: var(--link-hover-text);
+}
+
+
+
+/* MAIN HEADER
+**************************************/
+#main-header {
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+
+    background-color: var(--header-back);
+    box-shadow: 0 0.1rem 0.3rem #0008;
+}
+
+#main-header h1 a {
+    text-decoration: none;
+    color: var(--header-text);
+}
+
+
+/* PROJECT LIST
+**************************************/
+
+#project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+a.project {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+
+    text-decoration: none;
+    background-color: var(--panel-back);
+    color: var(--page-text);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+}
+
+a.project:hover {
+    background-color: var(--highlight-back);
+}
+
+a.project p {
+    margin-bottom: 0;
+}
+
+p.late {
+    color: var(--late-text);
+}
+
+
+/* TASK LISTS
+**************************************/
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+
+    list-style: none;
+}
+
+#task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem 1rem;
+
+    background-color: var(--panel-back);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+}
+
+#task-list li.done {
+    color: var(--done-text);
+    background-color: var(--done-back);
+}
+
+/* The done links / buttons */
+#task-list a {
+    display: block;
+    padding: 0.2rem 0.5rem;
+
+    text-decoration: none;
+    background-color: var(--button-back);
+    color: var(--button-text);
+    border-radius: 0.5rem;
+}
+
+#task-list a:hover {
+    background-color: var(--button-hover-back);
+    color: var(--button-hover-text);
+}
+
+
+
+/* MAIN FOOTER
+**************************************/
+#main-footer {
+    padding: 1rem;
+    text-align: center;
+    color: var(--page-text-low);
+}
+
