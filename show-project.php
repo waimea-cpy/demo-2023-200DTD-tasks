@@ -56,5 +56,19 @@
 
     echo '</ol>';
 
+?>
+
+<form method="POST" action="process-new-task.php">
+
+    <label>New Task</label>
+    <input name="name" type="text" required>
+
+    <input name="project" type="hidden" value="<?= $projectID ?>">
+
+    <input type="submit" value="Add Task">
+
+</form>
+
+<?php
     require_once 'common-bottom.php';
 ?>
