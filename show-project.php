@@ -29,7 +29,7 @@
     // Get all of the tasks for this project
     echo '<h3>Tasks</h3>';
 
-    $sql = 'SELECT name, done
+    $sql = 'SELECT id, name, done
             FROM tasks
             WHERE project = ?';
 
@@ -48,7 +48,7 @@
         echo $task['name'];
 
         if( $task['done'] == false ) {
-            echo ' <a href="process-task-done.php">Done</a>';
+            echo ' <a href="process-task-done.php?id='.$task['id'].'">Done</a>';
         }
 
         echo '</li>';
